@@ -1,0 +1,22 @@
+/* bugSolution.css */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.parent-element {
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.child-element {
+  background-color: lightblue; /* This was causing the problem in the original code*/ 
+  padding: 10px; 
+}
+
+/* Solution: Added more specificity to the child-element selector to override other styles */
+.parent-element .child-element {
+  background-color: lightblue;
+  padding: 10px;
+} 
